@@ -15,10 +15,15 @@ public class TodoItemsController : ControllerBase
     {
         _context = context;
     }
-    
+    //  GET: api/TodoItems
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetToDoItems()
+    {
+        return await _context.TodoItems.Select(x => ItemToDTO(x)).ToListAsync();
+    }
     //  GET: api/TodoItems/5
     //  <snippet_GetByID>
-    [HttpGet({"{id}"})]
+    [HttpGet("{id}")]
     public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
     {
         var todoItem = await _context.TodoItems.FindAsync(id);
@@ -30,4 +35,11 @@ public class TodoItemsController : ControllerBase
 
         return ItemToDTO(todoItem);
     }
+    private static TodoItemDTO ItemToDTO(TodoItemDTO todoItem) =>
+       new TodoItemDTO
+       {
+           Id = todoItem.Id,
+           Name = todoItem.Name,
+           IsComplete = todoItem.IsComplete
+       };
 }
