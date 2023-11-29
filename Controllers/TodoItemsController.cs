@@ -65,6 +65,25 @@ public class TodoItemsController : ControllerBase
         return NoContent();
     }
 
+    [HttpPost]
+    public async Task<ActionResult<TodoItemDTO>> PostTodoItem(TodoItemDTO todoDTO)
+    {
+        var todoItem = new TodoItemDTO
+        {
+            IsComplete = todoDTO.IsComplete,
+            Name = todoDTO.Name
+        };
+
+        _context.TodoItems.Add(todoItem);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(
+            nameof(GetTodoItem),
+            new { id = todoItem.Id },
+            ItemToDTO(todoItem));
+        
+    }
+
     private bool TodoItemExists(long id)
     {
         return _context.TodoItems.Any(e => e.Id == id);
