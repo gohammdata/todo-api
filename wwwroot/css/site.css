@@ -1,5 +1,36 @@
-input[type='submit'], button, [aria-label] {
+input[type='submit'], button {
     cursor: pointer;
+}
+
+.add-button {
+    background-color: #23b5b5;
+    cursor: pointer;
+    border-radius: 1rem;
+    border-color: #23b5b5;
+    height: 2rem;
+    width: 50%;
+    margin: auto;
+    color: white;
+    font-size: 1rem;
+
+}
+
+h3 {
+    margin-left: -46.6%;
+}
+.input-to-do {
+    background-color: white;
+    height: 2rem;
+    border-radius: 1rem;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+body {
+    background-color: #0b1b2d;
+    color: white;
+    text-align: center;
 }
 
 #editForm {
@@ -9,15 +40,31 @@ input[type='submit'], button, [aria-label] {
 table {
     font-family: Arial, sans-serif;
     border: 1px solid;
+    border-color: white;
     border-collapse: collapse;
+    margin: auto;
+    width: 50%;
 }
 
 th {
-    background-color: #f8f8f8;
+    background-color: white;
     padding: 5px;
+    border: 1px solid;
+    text-align: center;
+    color:#0b1b2d;
+    border-color: white;
 }
 
 td {
     border: 1px solid;
     padding: 5px;
+    text-align: center;
+}
+button {
+    background-color: #23b5b5;
+    border-color: #23b5b5;
+    border-radius: 1rem;
+}
+#counter {
+    margin-left: -45%; 
 }
