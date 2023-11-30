@@ -254,3 +254,16 @@
 /Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
 /Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/TodoApi.staticwebassets.runtime.json
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/AWSSDK.Core.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/AWSSDK.SecurityToken.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/DnsClient.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/MongoDB.Driver.Core.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/MongoDB.Libmongocrypt.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/SharpCompress.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/Snappier.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/ZstdSharp.dll
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/runtimes/linux/native/libmongocrypt.so
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/runtimes/osx/native/libmongocrypt.dylib
+/Users/johnhamm/Documents/Controller .NET API/TodoApi/bin/Debug/net8.0/runtimes/win/native/mongocrypt.dll
