@@ -1,4 +1,4 @@
-const uri = 'api/todoitems';
+const uri = 'api/todo';
 let todos = [];
 
 function getItems() {
@@ -52,7 +52,7 @@ function displayEditForm(id) {
 function updateItem() {
   const itemId = document.getElementById('edit-id').value;
   const item = {
-    id: parseInt(itemId, 10),
+    id: itemId,
     isComplete: document.getElementById('edit-isComplete').checked,
     name: document.getElementById('edit-name').value.trim()
   };
@@ -99,11 +99,11 @@ function _displayItems(data) {
 
     let editButton = button.cloneNode(false);
     editButton.innerText = 'Edit';
-    editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
+    editButton.setAttribute('onclick', `displayEditForm('${item.id}')`);
 
     let deleteButton = button.cloneNode(false);
     deleteButton.innerText = 'Delete';
-    deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
+    deleteButton.setAttribute('onclick', `deleteItem('${item.id}')`);
 
     let tr = tBody.insertRow();
     
