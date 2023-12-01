@@ -12,3 +12,12 @@ public class TodoItemDTO
     public string? Name { get; set; }
     public bool IsComplete {get; set; }
 }
+
+public class ToDoDatabaseSettings
+{
+    public string ConnectionString { get; set; } = null!;
+
+    public string DatabaseName { get; set; } = null!;
+
+    public string ToDoCollectionName { get; set; } = null!;
+}

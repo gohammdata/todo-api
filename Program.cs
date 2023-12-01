@@ -3,6 +3,9 @@ using TodoApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.Configure<ToDoDatabaseSettings>(
+    builder.Configuration.GetSection("ToDoDatabase"));
+
 // Add services to the container.
 
 builder.Services.AddControllers();

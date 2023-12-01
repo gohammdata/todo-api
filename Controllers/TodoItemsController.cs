@@ -24,7 +24,7 @@ public class TodoItemsController : ControllerBase
     //  GET: api/TodoItems/5
     //  <snippet_GetByID>
     [HttpGet("{id}")]
-    public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
+    public async Task<ActionResult<TodoItemDTO>> GetTodoItem(string id)
     {
         var todoItem = await _context.TodoItems.FindAsync(id);
 
@@ -37,7 +37,7 @@ public class TodoItemsController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutTodoItem(long id, TodoItemDTO todoDTO)
+    public async Task<IActionResult> PutTodoItem(string id, TodoItemDTO todoDTO)
     {
         if (id != todoDTO.Id)
         {
@@ -85,7 +85,7 @@ public class TodoItemsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteTodoItem(long id)
+    public async Task<IActionResult> DeleteTodoItem(string id)
     {
         var todoItem = await _context.TodoItems.FindAsync(id);
         if (todoItem == null)
@@ -99,7 +99,7 @@ public class TodoItemsController : ControllerBase
         return NoContent();
     }
 
-    private bool TodoItemExists(long id)
+    private bool TodoItemExists(string id)
     {
         return _context.TodoItems.Any(e => e.Id == id);
     }
